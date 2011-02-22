@@ -53,11 +53,6 @@ alias go='git checkout '
 alias gk='gitk --all&'
 alias gx='gitx --all'
 
-#
-# Misc scripts
-#
-alias remote-lyagushka="ssh pairing@86.7.114.4 -p 3023"
-
 # Add the following to your ~/.bashrc or ~/.zshrc
 hitch() {
   command hitch "$@"
