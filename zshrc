@@ -8,16 +8,12 @@ compinit
 source ~/.zsh/func/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/func/bashmarks.sh
 source ~/.zsh/func/git-flow-completion.zsh
+source ~/.zsh/func/prompt_repo.zsh
 source ~/.zsh/themes/lambda.zsh-theme
-
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 export TERM='xterm-color'
-alias ls='ls -G'
-alias ll='ls -lG'
-alias krakken=rake
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
@@ -26,6 +22,9 @@ export HISTSIZE=100000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 export NODE_PATH=/usr/local/lib/node_modules
+
+# CPP compilation
+export CPPFLAGS=-I/opt/X11/include
 
 # Originally from Jonathan Penn, with modifications by Gary Bernhardt
 function whodoneit() {
@@ -45,7 +44,13 @@ hitch() {
 }
 
 # A L I A S E S
+#
+# tmux
 alias tmux="TERM=screen-256color-bce tmux"
+
+# moving around
+alias ls='ls -G'
+alias ll='ls -lG'
 
 # git
 alias gk='gitk --all&'
@@ -64,6 +69,7 @@ alias gra='git remote add'
 alias grr='git remote rm'
 alias gpu='git pull'
 alias gcl='git clone'
+
 # heroku
 alias gps='git push staging develop:master'
 alias gpp='git push production master'
@@ -72,5 +78,12 @@ alias gpp='git push production master'
 alias unhitch='hitch -u'
 
 # ruby
-alias rc='rake cucumber'
-alias rsp='rake spec'
+alias b='bundle exec'
+alias be='bundle exec'
+alias rc='cucumber'
+alias rsp='rspec'
+alias ber='bundle exec rake'
+alias krakken=rake
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
