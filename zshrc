@@ -47,6 +47,8 @@ hitch() {
 #
 # tmux
 alias tmux="TERM=screen-256color-bce tmux"
+alias t='tmuxinator'
+alias ts='tmuxinator start'
 
 # moving around
 alias ls='ls -G'
