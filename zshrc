@@ -11,7 +11,7 @@ source ~/.zsh/func/git-flow-completion.zsh
 source ~/.zsh/func/prompt_repo.zsh
 source ~/.zsh/themes/lambda.zsh-theme
 
-PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+PATH=~/bin:/usr/local/bin:/usr/local/sbin:/Applications/SWI-Prolog.app/Contents/MacOS:$PATH
 
 export TERM='xterm-color'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
@@ -42,6 +42,8 @@ hitch() {
   command hitch "$@"
   if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
 }
+
+eval "$(direnv hook zsh)"
 
 # A L I A S E S
 #
@@ -86,6 +88,8 @@ alias rc='cucumber'
 alias rsp='rspec'
 alias ber='bundle exec rake'
 alias krakken=rake
+alias specio=./bin/specio
+alias v8=node
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
