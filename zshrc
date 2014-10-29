@@ -90,6 +90,7 @@ alias ber='bundle exec rake'
 alias krakken=rake
 alias specio=./bin/specio
 alias v8=node
+alias v60='mocha --compilers coffee:coffee-script/register -R spec'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
