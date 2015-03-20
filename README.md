@@ -1,10 +1,7 @@
 # My zsh configuration
-To make this configuration work create symbolic links to your home directory.
 
-`cd`
+**THIS PROJECT HAS BEEN DEPRECATED**
 
-`ln -s /somewhere/zsh_conf/zsh .zsh`
-
-`ln -s /somewhere/zsh_conf/zshrc .zshrc`
-
-`ln -s /somewhere/zsh_conf/zshenv .zshenv`
+If you are interested you should check out my
+[osx-setup](https://github.com/ecomba/osx-setup) project,
+which supersedes this one.
